@@ -1,6 +1,6 @@
 ## :writing_hand: Exercícios de Programação </h1>
 
-Este repositório é destinado tem como o objetivo a realização de questões para testar os conhecimentos de lógica de programação.
+Este repositório é destinado à realização de questões e tem como o objetivo testar os conhecimentos de lógica de programação.
 
 ---
 
@@ -9,19 +9,22 @@ Este repositório é destinado tem como o objetivo a realização de questões p
 Para a realização dos exercícios:
 - [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 - [Jest](https://jestjs.io/pt-BR/)
+- [Node.js](https://nodejs.org/en/)
+- [VS Code](https://code.visualstudio.com/)
 
 ---
 
 ## :hammer_and_wrench: Instalação e Testes
-Para instalação das dependências necessárias utilize o seguinte comando:
+Para instalação das dependências necessárias e do ambiente de execução NodeJS utilize o seguinte comando:
 
 ```sh
-npm ou yarn install 
+npm install or yarn install 
 ```
- Para executar todos os testes utilize o seguinte comando : 
+
+Para executar todos os testes utilize o seguinte comando : 
 
 ```sh
-yarn test
+npm test or yarn test
 ```
 
 Caso queira executar só um arquivo de test use o seguinte comando, considerando que quer testar o arquivo `tests/questao_1.test.js`:
