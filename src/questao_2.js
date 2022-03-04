@@ -2,7 +2,7 @@
 https://pt.stackoverflow.com/questions/373574/regex-para-senha-forte */
 
 function validadorSenha(senha) {
-    //Utilização de Expressões Regulares -  RegEx para validação de caracteres      
+    // Utilização de Expressões Regulares -  RegEx para validação de caracteres      
     const regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$*&@#])[0-9a-zA-Z$*&@#]{6,}$/
 
     const minLengthSenha = 6

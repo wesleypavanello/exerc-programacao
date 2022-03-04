@@ -5,7 +5,7 @@ function funcMediana(vet) {
     var j = 0;
     var i = 0;
     var t = 0;
-    // ordenação do vetor para o valor de maior indice (bubble sort)
+    // Ordenação do vetor para o valor de maior indice (bubble sort)
     for (i = 0; i < vet.length; i++) {
         for (j = i + 1; j < vet.length; j++) {
             if (vet[i] > vet[j]) {
@@ -16,9 +16,9 @@ function funcMediana(vet) {
         }
     }
 
-    //Mediana é o numero central do vetor após ordenado
-    //inicializamos as variaveis e convertemos o objeto tipo string do vetor
-    //e foi realizada  a operação da mediana 
+    // Mediana é o numero central do vetor após ordenado
+    // inicializamos as variaveis e convertemos o objeto tipo string do vetor
+    // e foi realizada  a operação da mediana 
     var mediana = 0;
     var meio = 0;
     meio = parseInt(vet.length / 2);

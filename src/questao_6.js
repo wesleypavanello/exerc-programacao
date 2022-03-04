@@ -1,53 +1,71 @@
 /* Pesquisa utilizada como referência para a questão:
-https://www.geeksforgeeks.org/encrypt-the-given-string-with-the-following-operations/  */
+https://www.geeksforgeeks.org/encrypt-the-given-string-with-the-following-operations/
+https://pt.stackoverflow.com/questions/205872/separar-um-array-em-grupos  */
 
-var MAX = 26;
-
-// Function to return the encrypted string
-function funcEncryptStr(str, n, x) {
-
-    // Reduce x because rotation of
-    // length 26 is unnecessary
-    x = x % MAX;
-
-    // Calculate the frequency of characters
-    var freq = Array(MAX).fill(0);
-
-    for (var i = 0; i < n; i++) {
-        freq[str[i].charCodeAt(0) - 'a'.charCodeAt(0)]++;
-    }
-
-    for (var i = 0; i < n; i++) {
-
-        // If the frequency of current character
-        // is even then increment it by x
-        if (freq[str[i].charCodeAt(0) - 'a'.charCodeAt(0)] % 2 == 0) {
-            var pos = (str[i].charCodeAt(0) - 'a'.charCodeAt(0) + x) % MAX;
-            str[i] = String.fromCharCode(pos + 'a'.charCodeAt(0));
+function funcEncryptStr() {
+    let string = "";
+    let array = [];
+    string = 'tenha um bom dia';
+    array = string.split(""); // separar string
+    for (let i = 0; i < array.length; i++) {
+        // retirar espaço
+        if (array[i] === " ") {
+            array.splice(i, 1);
         }
-
-        // Else decrement it by x
-        else {
-            var pos = (str[i].charCodeAt(0) - 'a'.charCodeAt(0) - x);
-
-            if (pos < 0) {
-                pos += MAX;
-            }
-
-            str[i] = String.fromCharCode(pos + 'a'.charCodeAt(0));
-        }
-        console.log(str, n, x);
     }
-
-    // Return the count
-    return str;
+    //Chamada da função de dividr array
+    dividirArray(array);
+    console.log(string);
 }
 
-function printarString(str, n, x) {
-    var s = "abcda";
-    var n = s.length;
-    var x = 3;
-    return funcEncryptStr(str, n, x);
+function dividirArray(arr) {
+    let n = Math.ceil(Math.sqrt(arr.length));
+    separar(arr, n);
+}
+
+// Separação do array em grupos
+function separar(base, maximo) {
+    let resultado = [[]];
+    let grupo = 0;
+    for (let indice = 0; indice < base.length; indice++) {
+        if (resultado[grupo] === undefined) {
+            resultado[grupo] = [];
+        }
+        resultado[grupo].push(base[indice]);
+        if ((indice + 1) % maximo === 0) {
+            grupo = grupo + 1;
+        }
+    }
+    exibirString(transporArray(resultado));
+}
+// Método Object.keys
+function transporArray(a) {
+    return Object.keys(a[0]).map(function (c) {
+        return a.map(function (r) {
+            return r[c];
+        });
+    });
+}
+
+// Retorna a string encriptada
+function exibirString(arr) { //
+    let string = "";
+    for (let i = 0; i < arr.length; i++) {
+        string += " " + arr[i];
+    }
+    let novaString = "";
+    novaString = string.replace(/,/g, '');
+    nova = novaString;
+    console.log(nova);
+    return nova;
+
+}
+
+// Apenas para chamar a função para test
+// função sem retorno não tem validação de dados
+
+function printarString() {
+    return funcEncryptStr();
 }
 
 module.exports = { printarString };

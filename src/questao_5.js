@@ -5,10 +5,10 @@ function funcParesDeDiferenca(arr, arr_size) {
     let par_count = 0;
     let impar_count = 0;
 
-    // laço para ler os valores da matriz
+    // Laço para ler os valores da matriz
     for (let i = 0; i < arr_size; i++) {
 
-        // verifica se é um número ímpar ou par para contagem
+        // Verifica se é um número ímpar ou par para contagem
         // divisivel por 2
         if (arr[i] & 1 == 1)
             impar_count++;
