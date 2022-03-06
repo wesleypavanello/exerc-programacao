@@ -18,7 +18,7 @@ function funcMediana(vet) {
 
     // Mediana é o numero central do vetor após ordenado
     // inicializamos as variaveis e convertemos o objeto tipo string do vetor
-    // e foi realizada  a operação da mediana 
+    // e foi realizada a operação da mediana 
     var mediana = 0;
     var meio = 0;
     meio = parseInt(vet.length / 2);
@@ -31,6 +31,5 @@ function printarMediana(vet) {
     var vet = [9, 2, 1, 4, 6];
     return funcMediana(vet);
 }
-
 
 module.exports = { printarMediana };

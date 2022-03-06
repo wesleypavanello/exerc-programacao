@@ -26,5 +26,4 @@ function printarParesExistentes(arr, n) {
 
 }
 
-
 module.exports = { printarParesExistentes };

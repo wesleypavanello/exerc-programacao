@@ -1,6 +1,5 @@
 const { validadorSenha } = require('../src/questao_2')
 
-
 describe('Questão 2', () => {
 
   describe('Verifica se o campo senha está nulo ou vazio', () => {

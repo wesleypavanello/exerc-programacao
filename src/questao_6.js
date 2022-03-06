@@ -2,6 +2,7 @@
 https://www.geeksforgeeks.org/encrypt-the-given-string-with-the-following-operations/
 https://pt.stackoverflow.com/questions/205872/separar-um-array-em-grupos  */
 
+// Entrada string encriptada
 function funcEncryptStr() {
     let string = "";
     let array = [];
@@ -13,7 +14,7 @@ function funcEncryptStr() {
             array.splice(i, 1);
         }
     }
-    //Chamada da função de dividr array
+    // Chamada da função de dividir array
     dividirArray(array);
     console.log(string);
 }
@@ -63,7 +64,6 @@ function exibirString(arr) { //
 
 // Apenas para chamar a função para test
 // função sem retorno não tem validação de dados
-
 function printarString() {
     return funcEncryptStr();
 }

@@ -15,7 +15,6 @@ function criarTriangulo(n) {
       }
     }
     console.log(linha);
-
     linha = '';
     posicao -= 1;
   };

@@ -1,6 +1,5 @@
 const { resultadoAnagrama } = require('../src/questao_3')
 
-
 describe('Questão 3', () => {
   test('Retorna 2 anagramas para a string "ovo"', () => {
     expect(resultadoAnagrama('ovo')).toBe(2);
