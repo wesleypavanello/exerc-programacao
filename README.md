@@ -28,9 +28,11 @@ npm test or yarn test
 ```
 
 Caso queira executar só um arquivo de test use o seguinte comando, considerando que quer testar o arquivo `tests/questao_1.test.js`:
-
+```sh
+npm test or yarn test tests/questao_1.test.js
+```
 ## :grey_question: Questões
-#### Segue abaixo instruções para execução dos questionarios, nesse metodo tem os exemplo de execução da questão
+#### Segue abaixo instruções para execução dos questionarios:
 
 ><h3>Questão 01 - Escadas: </h3>
 >
